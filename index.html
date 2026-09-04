@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Bharat — India Moves Together | Janmashtami Launch</title>
+    <meta name="description" content="Experience Ride Bharat's Shri Krishna Janmashtami website launch and 48-hour driver app countdown. India Moves Together.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Ride Bharat — Janmashtami Launch & Driver App Countdown">
+    <meta property="og:description" content="India Moves Together. Ride to a Better India. Join our national mobility platform launch.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ridebharat.live">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF7A00',
+                            green: '#138808',
+                            navy: '#0B192C',
+                            blue: '#1E3E62',
+                            gold: '#FFD700',
+                            darkBlue: '#050B14'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', 'Hind', sans-serif;
+            background-color: #050B14;
+            color: #F8FAFC;
+        }
+        .glow-gold {
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+        .glow-box {
+            box-shadow: 0 0 30px rgba(255, 122, 0, 0.25);
+        }
+        .hero-bg {
+            background: radial-gradient(circle at 50% 20%, #1E3E62 0%, #0B192C 60%, #050B14 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-orange selection:text-white">
+
+    <!-- Top Notification Bar -->
+    <div class="bg-gradient-to-r from-brand-orange via-yellow-500 to-brand-green text-brand-navy font-bold text-xs sm:text-sm py-2 px-4 text-center tracking-wide">
+        🎉 शुभ श्री कृष्ण जन्माष्टमी! • Website Launch Today at 12:00 AM (Midnight) IST • India Moves Together 🇮🇳
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-brand-navy/95 backdrop-blur-md border-b border-white/10 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="bg-gradient-to-br from-brand-orange via-white to-brand-green p-1 rounded-xl shadow-md">
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=100&h=100&fit=crop" alt="Ride Bharat" class="w-10 h-10 rounded-lg object-cover hidden">
+                    <div class="w-10 h-10 bg-brand-navy rounded-lg flex items-center justify-center text-brand-orange font-black text-xl">RB</div>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-black tracking-wider text-white block leading-none">RIDE BHARAT</span>
+                    <span class="text-[10px] sm:text-xs text-brand-gold font-medium tracking-widest">RIDE TO A BETTER INDIA</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#home" class="hover:text-brand-orange transition-colors">Home</a>
+                <a href="#about" class="hover:text-brand-orange transition-colors">About</a>
+                <a href="#services" class="hover:text-brand-orange transition-colors">Services</a>
+                <a href="#driver" class="hover:text-brand-orange transition-colors">Driver Partner</a>
+                <a href="#plans" class="hover:text-brand-orange transition-colors">Partner Plans</a>
+                <a href="#contact" class="hover:text-brand-orange transition-colors">Contact</a>
+            </nav>
+
+            <!-- Right Domain & CTA -->
+            <div class="hidden md:flex items-center gap-5">
+                <span class="text-xs font-bold text-brand-gold bg-brand-gold/10 px-3 py-1.5 rounded-full border border-brand-gold/30">
+                    <i class="fa-solid fa-globe mr-1.5"></i>www.ridebharat.live
+                </span>
+                <button onclick="openModal('get-started')" class="bg-gradient-to-r from-brand-orange to-amber-600 hover:from-amber-600 hover:to-brand-orange text-white font-bold px-6 py-2.5 rounded-full shadow-lg shadow-brand-orange/30 transform hover:-translate-y-0.5 transition-all text-sm">
+                    GET STARTED
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl p-2 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-navy border-b border-white/10 px-6 py-5 space-y-4 shadow-2xl">
+            <a href="#home" class="block text-slate-200 hover:text-brand-orange font-medium">Home</a>
+            <a href="#about" class="block text-slate-200 hover:text-brand-orange font-medium">About</a>
+            <a href="#services" class="block text-slate-200 hover:text-brand-orange font-medium">Services</a>
+            <a href="#driver" class="block text-slate-200 hover:text-brand-orange font-medium">Driver Partner</a>
+            <a href="#plans" class="block text-slate-200 hover:text-brand-orange font-medium">Partner Plans</a>
+            <a href="#contact" class="block text-slate-200 hover:text-brand-orange font-medium">Contact</a>
+            <div class="pt-2 border-t border-white/10 flex flex-col gap-3">
+                <span class="text-xs font-bold text-brand-gold">www.ridebharat.live</span>
+                <button onclick="openModal('get-started')" class="bg-brand-orange text-white font-bold py-2.5 rounded-xl text-center shadow-md">GET STARTED</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Janmashtami Introduction Section -->
+    <section id="home" class="hero-bg relative overflow-hidden py-16 sm:py-24 text-center px-4">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FFD700_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10 space-y-6">
+            <div class="inline-flex items-center gap-2 bg-brand-gold/20 border border-brand-gold/40 px-4 py-1.5 rounded-full text-brand-gold text-xs sm:text-sm font-semibold shadow-inner">
+                <i class="fa-solid fa-om text-brand-orange"></i> Shri Krishna Janmashtami Special Launch Event
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-wide glow-gold">
+                श्री कृष्ण जन्माष्टमी की हार्दिक शुभकामनाएं
+            </h1>
+
+            <div class="space-y-2 text-slate-300 text-lg sm:text-xl font-medium">
+                <p class="text-brand-gold">आज एक शुभ दिन है... एक नई शुरुआत... एक बेहतर भारत के लिए!</p>
+                <p class="italic font-light text-slate-400">"Faith Drives a Better Tomorrow"</p>
+            </div>
+
+            <div class="pt-2">
+                <span class="inline-block text-xl sm:text-2xl font-extrabold bg-gradient-to-r from-brand-orange via-white to-brand-green bg-clip-text text-transparent">
+                    India Moves Together 🇮🇳
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Launch Countdown Section -->
+    <section class="bg-brand-blue/30 border-y border-white/10 py-12 px-4 relative">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <div class="inline-block bg-brand-orange text-white font-bold text-xs uppercase px-4 py-1 rounded-full shadow-md animate-pulse" id="website-countdown-badge">
+                WEBSITE LAUNCH COUNTDOWN
+            </div>
+            
+            <h2 id="website-countdown-title" class="text-2xl sm:text-3xl font-bold text-white">
+                आज रात 12:00 AM — श्री कृष्ण जन्माष्टमी के शुभ अवसर पर
+            </h2>
+
+            <!-- Real Live Countdown Timer -->
+            <div id="website-timer-container" class="grid grid-cols-4 gap-3 sm:gap-6 max-w-2xl mx-auto">
+                <div class="bg-brand-navy/80 border border-brand-orange/40 rounded-2xl p-3 sm:p-5 shadow-xl">
+                    <span id="web-days" class="text-3xl sm:text-5xl font-black text-brand-gold block">00</span>
+                    <span class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest">Days</span>
+                </div>
+                <div class="bg-brand-navy/80 border border-brand-orange/40 rounded-2xl p-3 sm:p-5 shadow-xl">
+                    <span id="web-hours" class="text-3xl sm:text-5xl font-black text-brand-gold block">00</span>
+                    <span class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest">Hours</span>
+                </div>
+                <div class="bg-brand-navy/80 border border-brand-orange/40 rounded-2xl p-3 sm:p-5 shadow-xl">
+                    <span id="web-minutes" class="text-3xl sm:text-5xl font-black text-brand-gold block">00</span>
+                    <span class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest">Minutes</span>
+                </div>
+                <div class="bg-brand-navy/80 border border-brand-orange/40 rounded-2xl p-3 sm:p-5 shadow-xl">
+                    <span id="web-seconds" class="text-3xl sm:text-5xl font-black text-brand-gold block">00</span>
+                    <span class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest">Seconds</span>
+                </div>
+            </div>
+
+            <!-- Live State Container (Initially Hidden if before launch) -->
+            <div id="website-live-state" class="hidden space-y-4">
+                <div class="text-3xl sm:text-4xl font-black text-brand-gold">
+                    🚀 RIDE BHARAT WEBSITE IS LIVE!
+                </div>
+                <p class="text-slate-300 text-sm sm:text-base">રાઈડ ભારતની વેબસાઈट હવે LIVE છે — Welcome to a New Era of Mobility.</p>
+                <div class="pt-2">
+                    <a href="https://www.ridebharat.live" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-orange to-green-600 hover:from-green-600 hover:to-brand-orange text-white font-bold px-8 py-3.5 rounded-full shadow-2xl transition-all transform hover:scale-105 text-lg">
+                        <i class="fa-solid fa-globe"></i> VISIT www.ridebharat.live
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reference Image Section (Heart of the Page) -->
+    <section id="about" class="py-12 sm:py-16 px-4 bg-brand-darkBlue">
+        <div class="max-w-6xl mx-auto space-y-6">
+            <div class="text-center space-y-2">
+                <h3 class="text-xs sm:text-sm font-bold text-brand-orange uppercase tracking-widest">Official Launch Creative</h3>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Ride Bharat Vision, Services & Plans</h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto">Explore all services, driver partner opportunities, subscription tiers, and special Janmashtami announcements in our official master promotional creative below.</p>
+            </div>
+
+            <div class="relative bg-brand-navy p-2 sm:p-4 rounded-2xl sm:rounded-3xl border border-brand-orange/30 shadow-2xl glow-box overflow-hidden">
+                <div class="overflow-x-auto">
+                    <img src="file_000000004d388211a3d33153c2f973ee.png" alt="Ride Bharat Janmashtami & Launch Promotional Creative" class="w-full h-auto object-contain rounded-xl shadow-lg block mx-auto max-w-[1200px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Driver App Section & 48-Hour Countdown -->
+    <section id="driver" class="py-16 sm:py-24 px-4 bg-gradient-to-b from-brand-darkBlue to-brand-navy border-t border-white/10 text-center relative">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="inline-flex items-center gap-2 bg-brand-orange/20 border border-brand-orange/40 px-4 py-1.5 rounded-full text-brand-orange text-xs sm:text-sm font-semibold">
+                <i class="fa-solid fa-mobile-screen-button"></i> Exclusive Driver Companion App
+            </div>
+
+            <div class="space-y-3">
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-wide">RIDE BHARAT DRIVER APP</h2>
+                <p class="text-xl sm:text-2xl font-bold text-brand-gold">India's Drivers. India's App.</p>
+                <div class="text-sm font-medium text-slate-300">
+                    App Branding: <span class="text-brand-orange font-bold">ridebhart.live</span> | Official Portal: <span class="text-brand-gold font-bold">www.ridebharat.live</span>
+                </div>
+            </div>
+
+            <div class="bg-brand-blue/20 border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-md space-y-6">
+                <h3 class="text-xl sm:text-2xl font-bold text-white" id="driver-countdown-heading">
+                    DRIVER APP LAUNCHING IN (48-Hour Countdown)
+                </h3>
+
+                <!-- App 48-Hour Countdown Timer -->
+                <div id="driver-timer-container" class="grid grid-cols-3 gap-4 max-w-xl mx-auto">
+                    <div class="bg-brand-navy border border-brand-gold/40 rounded-2xl p-4 sm:p-6 shadow-xl">
+                        <span id="app-hours" class="text-3xl sm:text-5xl font-black text-brand-gold block">48</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Hours</span>
+                    </div>
+                    <div class="bg-brand-navy border border-brand-gold/40 rounded-2xl p-4 sm:p-6 shadow-xl">
+                        <span id="app-minutes" class="text-3xl sm:text-5xl font-black text-brand-gold block">00</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Minutes</span>
+                    </div>
+                    <div class="bg-brand-navy border border-brand-gold/40 rounded-2xl p-4 sm:p-6 shadow-xl">
+                        <span id="app-seconds" class="text-3xl sm:text-5xl font-black text-brand-gold block">00</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Seconds</span>
+                    </div>
+                </div>
+
+                <!-- App Live State Container -->
+                <div id="app-live-state" class="hidden space-y-4">
+                    <div class="text-2xl sm:text-3xl font-black text-brand-gold">
+                        🚀 राइड भारत ड्राइवर ऐप अब LIVE है!
+                    </div>
+                    <p class="text-slate-300 text-sm">Download the official driver app and start earning with zero commission options.</p>
+                    <div class="flex flex-wrap justify-center gap-4 pt-2">
+                        <button onclick="openModal('download')" class="bg-gradient-to-r from-brand-orange to-amber-600 hover:from-amber-600 hover:to-brand-orange text-white font-bold px-8 py-3.5 rounded-full shadow-xl transition-all transform hover:scale-105">
+                            <i class="fa-solid fa-download mr-2"></i> GET THE APP
+                        </button>
+                        <a href="https://www.ridebharat.live" target="_blank" class="bg-brand-navy border border-white/20 hover:bg-brand-navy/80 text-white font-bold px-8 py-3.5 rounded-full shadow-xl transition-all">
+                            ridebhart.live
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Brand Pillars Section -->
+    <section id="services" class="py-16 px-4 bg-brand-navy border-t border-white/10">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="text-2xl sm:text-4xl font-black text-white">Why Ride Bharat?</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Empowering India's commuters and driver partners with trust, safety, and growth.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 text-center">
+                <div class="bg-brand-darkBuild/60 border border-white/10 p-6 rounded-2xl shadow-lg hover:border-brand-orange transition-all group">
+                    <div class="w-12 h-12 bg-brand-green/20 text-brand-green rounded-full flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Safe</h4>
+                    <p class="text-xs text-slate-400">Verified rides & 24/7 support.</p>
+                </div>
+
+                <div class="bg-brand-darkBuild/60 border border-white/10 p-6 rounded-2xl shadow-lg hover:border-brand-orange transition-all group">
+                    <div class="w-12 h-12 bg-brand-orange/20 text-brand-orange rounded-full flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Trusted</h4>
+                    <p class="text-xs text-slate-400">Millions of trusted citizens.</p>
+                </div>
+
+                <div class="bg-brand-darkBuild/60 border border-white/10 p-6 rounded-2xl shadow-lg hover:border-brand-orange transition-all group">
+                    <div class="w-12 h-12 bg-brand-gold/20 text-brand-gold rounded-full flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">More Earnings</h4>
+                    <p class="text-xs text-slate-400">Higher earnings for drivers.</p>
+                </div>
+
+                <div class="bg-brand-darkBuild/60 border border-white/10 p-6 rounded-2xl shadow-lg hover:border-brand-orange transition-all group">
+                    <div class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Verified Partners</h4>
+                    <p class="text-xs text-slate-400">Background checked partners.</p>
+                </div>
+
+                <div class="bg-brand-darkBuild/60 border border-white/10 p-6 rounded-2xl shadow-lg hover:border-brand-orange transition-all group">
+                    <div class="w-12 h-12 bg-purple-500/20 text-purple-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Bharat Wide</h4>
+                    <p class="text-xs text-slate-400">Connecting towns & cities.</p>
+                </div>
+
+                <div class="bg-brand-darkBuild/60 border border-white/10 p-6 rounded-2xl shadow-lg hover:border-brand-orange transition-all group">
+                    <div class="w-12 h-12 bg-red-500/20 text-red-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">For Everyone</h4>
+                    <p class="text-xs text-slate-400">Affordable mobility for all.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Plans Quick View -->
+    <section id="plans" class="py-16 px-4 bg-brand-darkBlue border-t border-white/10">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <span class="text-xs font-bold text-brand-gold uppercase tracking-widest">Partner Tiers</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">Subscription Plans for Every Partner</h2>
+                <p class="text-slate-400 text-sm">Choose your plan, grow your business with Ride Bharat.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-brand-navy border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl">
+                    <div class="space-y-4">
+                        <div class="text-center pb-4 border-b border-white/10">
+                            <h3 class="text-lg font-bold text-white uppercase">BASIC</h3>
+                            <div class="text-3xl font-black text-brand-gold mt-2">₹299 <span class="text-xs text-slate-400 font-normal">/month</span></div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> Create Profile</li>
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> Receive Leads</li>
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> Basic Visibility</li>
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> Support (In-App)</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="openModal('plan-basic')" class="w-full bg-white/10 hover:bg-brand-orange hover:text-white text-slate-200 font-bold py-3 rounded-xl transition-all">Get Started</button>
+                    </div>
+                </div>
+
+                <!-- Plus Plan (Most Popular) -->
+                <div class="bg-gradient-to-b from-brand-orange/20 to-brand-navy border-2 border-brand-orange rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-orange text-white text-[10px] uppercase font-black px-3 py-1 rounded-full shadow">
+                        Most Popular
+                    </div>
+                    <div class="space-y-4">
+                        <div class="text-center pb-4 border-b border-white/10">
+                            <h3 class="text-lg font-bold text-white uppercase">PLUS</h3>
+                            <div class="text-3xl font-black text-brand-gold mt-2">₹599 <span class="text-xs text-slate-400 font-normal">/month</span></div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> All Basic Features</li>
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> Higher Visibility</li>
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> Priority Leads</li>
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> More Earning Opportunities</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="openModal('plan-plus')" class="w-full bg-brand-orange hover:bg-amber-600 text-white font-bold py-3 rounded-xl transition-all shadow-lg">Get Started</button>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="bg-brand-navy border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl">
+                    <div class="space-y-4">
+                        <div class="text-center pb-4 border-b border-white/10">
+                            <h3 class="text-lg font-bold text-white uppercase">PRO</h3>
+                            <div class="text-3xl font-black text-brand-gold mt-2">₹999 <span class="text-xs text-slate-400 font-normal">/month</span></div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> All Plus Features</li>
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> Top Visibility</li>
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> Premium Leads</li>
+                            <li><i class="fa-solid fa-check text-brand-green mr-2"></i> Dedicated Support & Business Tools</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="openModal('plan-pro')" class="w-full bg-white/10 hover:bg-brand-orange hover:text-white text-slate-200 font-bold py-3 rounded-xl transition-all">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-navy border-t border-white/10 pt-16 pb-10 px-4 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-brand-orange rounded-xl flex items-center justify-center text-white font-black text-xl">RB</div>
+                    <div>
+                        <span class="text-xl font-bold text-white block">RIDE BHARAT</span>
+                        <span class="text-xs text-brand-gold tracking-widest font-medium">India Moves Together</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+                    <a href="#" class="hover:text-white transition-colors">Contact Us</a>
+                </div>
+
+                <div class="flex items-center gap-4 text-xl">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-all"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between text-xs gap-4">
+                <p>&copy; 2026 Ride Bharat. All Rights Reserved. Official Domain: <span class="text-brand-gold font-bold">www.ridebharat.live</span></p>
+                <p class="text-slate-500">Ride to a Better India 🇮🇳</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Modal Overlay -->
+    <div id="modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-brand-navy border border-brand-orange/40 w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl relative space-y-6">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 bg-brand-orange/20 text-brand-orange rounded-full flex items-center justify-center mx-auto text-xl mb-2">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3 id="modal-title" class="text-2xl font-black text-white">Ride Bharat Launch Event</h3>
+                <p id="modal-desc" class="text-slate-300 text-sm">Thank you for your interest in Ride Bharat. Our official platform is launching on Shri Krishna Janmashtami.</p>
+            </div>
+            <div class="space-y-4">
+                <input type="text" placeholder="Enter your full name" class="w-full bg-brand-darkBlue border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-orange">
+                <input type="tel" placeholder="Enter your mobile number" class="w-full bg-brand-darkBlue border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-orange">
+                <button onclick="handleModalSubmit()" class="w-full bg-gradient-to-r from-brand-orange to-amber-600 hover:from-amber-600 hover:to-brand-orange text-white font-bold py-3.5 rounded-xl shadow-lg transition-all">
+                    SUBMIT & JOIN LAUNCH
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Countdowns & Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal Functions
+        function openModal(type) {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+            const desc = document.getElementById('modal-desc');
+
+            if (type === 'get-started' || type.startsWith('plan-')) {
+                title.innerText = "Join Ride Bharat Partner Network";
+                desc.innerText = "Register early for priority onboarding during our Janmashtami midnight launch.";
+            } else if (type === 'download') {
+                title.innerText = "Ride Bharat Driver App";
+                desc.innerText = "The driver companion app (ridebhart.live) will be downloadable immediately after the 48-hour countdown concludes.";
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        function handleModalSubmit() {
+            alert('Thank you! Your details have been successfully registered for the Ride Bharat launch.');
+            closeModal();
+        }
+
+        // Countdown Calculations
+        // Website Launch Target: 05 September 2026, 00:00:00 IST (UTC+05:30)
+        // Note: IST is UTC+5:30 -> 2026-09-05T00:00:00+05:30
+        const websiteLaunchTime = new Date('2026-09-05T00:00:00+05:30').getTime();
+        
+        // Driver App Launch Target: 48 hours after website launch (07 September 2026, 00:00:00 IST)
+        const appLaunchTime = new Date('2026-09-07T00:00:00+05:30').getTime();
+
+        function updateCountdowns() {
+            const now = new Date().getTime();
+
+            // 1. Website Countdown Logic
+            const webDiff = websiteLaunchTime - now;
+            if (webDiff <= 0) {
+                // Website is LIVE
+                document.getElementById('website-timer-container').classList.add('hidden');
+                document.getElementById('website-countdown-title').classList.add('hidden');
+                document.getElementById('website-countdown-badge').innerText = "LIVE NOW";
+                document.getElementById('website-live-state').classList.remove('hidden');
+            } else {
+                const days = Math.floor(webDiff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((webDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((webDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((webDiff % (1000 * 60)) / 1000);
+
+                document.getElementById('web-days').innerText = String(days).padStart(2, '0');
+                document.getElementById('web-hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('web-minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('web-seconds').innerText = String(seconds).padStart(2, '0');
+            }
+
+            // 2. Driver App Countdown Logic (48 hours starting from website launch)
+            const appDiff = appLaunchTime - now;
+            if (now < websiteLaunchTime) {
+                // Before website launch, show standard 48 hours waiting state
+                document.getElementById('app-hours').innerText = "48";
+                document.getElementById('app-minutes').innerText = "00";
+                document.getElementById('app-seconds').innerText = "00";
+                document.getElementById('driver-countdown-heading').innerText = "DRIVER APP LAUNCHING IN (48-Hour Countdown starts at website launch)";
+            } else if (appDiff <= 0) {
+                // App is LIVE
+                document.getElementById('driver-timer-container').classList.add('hidden');
+                document.getElementById('driver-countdown-heading').classList.add('hidden');
+                document.getElementById('app-live-state').classList.remove('hidden');
+            } else {
+                const hours = Math.floor(appDiff / (1000 * 60 * 60));
+                const minutes = Math.floor((appDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((appDiff % (1000 * 60)) / 1000);
+
+                document.getElementById('driver-countdown-heading').innerText = "RIDE BHARAT DRIVER APP — 48-HOUR COUNTDOWN ACTIVE";
+                document.getElementById('app-hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('app-minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('app-seconds').innerText = String(seconds).padStart(2, '0');
+            }
+        }
+
+        // Run every second
+        setInterval(updateCountdowns, 1000);
+        updateCountdowns();
+    </script>
+</body>
+</html>
